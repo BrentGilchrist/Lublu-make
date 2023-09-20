@@ -1,9 +1,8 @@
 #include<iostream>
 #include<vector>
 #include<string>
-#include"agument handling.hpp"
-
-
+#include"log.hpp"
+#include"nogui.hpp"
 /*
 Conversion method:
 All arrays will be converted into int aguments which it will be used in a switch method:
@@ -13,34 +12,23 @@ All arrays will be converted into int aguments which it will be used in a switch
 */
 
 std::vector<std::string> commands{"--nogui", "--gui" "test"};
-std::vector<std::string>  usr_input{"lublu.exe", "--gui"};
+std::vector<std::string>  usr_input{"--nogui"};
 
 int main(int argc, char* argv[]) {
-	add_defintions(commands);
-	if (false) {
-		usr_input.push_back("--nogui");
-	}
-
-	else{
-		for(int transition = 0; transition < argc-1; transition++) {
-			if (argv[transition] != "lublu.exe") {
-				usr_input.push_back(argv[transition]);
-			}
+	for (int i=0 ; i < argc; i++) {
+		std::string agument = argv[i];
+		if (agument.find(".exe") == std::string::npos) {
+			usr_input.push_back(agument);
 		}
 	}
-	std::cout << convert_agument(usr_input[0]);
-
-	switch (convert_agument(usr_input[0])) {
+	switch (usr_input[1] == "--gui")
+	{
 	case 1:
-		std::cout << "no gui mode" << std::endl;
+		interpret();
 		break;
-	case 2:
-		std::cout << "gui mode" << std::endl;
+	default:
 		break;
-
 	}
-	void remove_defintions();
 
-	
 	return 0;
 }

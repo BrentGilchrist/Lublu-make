@@ -130,11 +130,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="agument handling.cpp" />
+    <ClCompile Include="log.cpp" />
+    <ClCompile Include="nogui.cpp" />
     <ClCompile Include="start.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="agument handling.hpp" />
+    <ClInclude Include="cmd_windows.hpp" />
+    <ClInclude Include="log.hpp" />
+    <ClInclude Include="nogui.hpp" />
+    <ClInclude Include="terminal_linux.cpp" />
+    <ClInclude Include="terminal_linux.hpp" />
+    <ClInclude Include="cmd_windows.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
