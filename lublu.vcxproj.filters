@@ -5,17 +5,17 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="nogui">
-      <UniqueIdentifier>{ad9e6795-af7c-4187-a3ee-e48629df13b6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="log">
       <UniqueIdentifier>{314d2865-c861-4ee8-89a6-ee9fe4bf7089}</UniqueIdentifier>
     </Filter>
     <Filter Include="gui">
       <UniqueIdentifier>{689f5cb0-bdd6-4556-a81f-50d78bd560c8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="nogui">
+      <UniqueIdentifier>{b59c1ba8-81dd-448a-be64-a32d96a942c1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="nogui\console">
-      <UniqueIdentifier>{8d957d93-cf12-4731-bf24-a19e28e61b27}</UniqueIdentifier>
+      <UniqueIdentifier>{1eaf7447-6584-4d87-b97f-bf525a43770f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -25,8 +25,14 @@
     <ClCompile Include="log.cpp">
       <Filter>log</Filter>
     </ClCompile>
+    <ClCompile Include="terminal_linux.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
     <ClCompile Include="nogui.cpp">
       <Filter>nogui</Filter>
+    </ClCompile>
+    <ClCompile Include="CMD_windows.cpp">
+      <Filter>nogui\console</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -36,16 +42,10 @@
     <ClInclude Include="nogui.hpp">
       <Filter>nogui</Filter>
     </ClInclude>
-    <ClInclude Include="cmd_windows.cpp">
-      <Filter>nogui\console</Filter>
-    </ClInclude>
-    <ClInclude Include="cmd_windows.hpp">
+    <ClInclude Include="CMD_windows.hpp">
       <Filter>nogui\console</Filter>
     </ClInclude>
     <ClInclude Include="terminal_linux.hpp">
-      <Filter>nogui\console</Filter>
-    </ClInclude>
-    <ClInclude Include="terminal_linux.cpp">
       <Filter>nogui\console</Filter>
     </ClInclude>
   </ItemGroup>

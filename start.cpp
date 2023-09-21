@@ -12,7 +12,7 @@ All arrays will be converted into int aguments which it will be used in a switch
 */
 
 std::vector<std::string> commands{"--nogui", "--gui" "test"};
-std::vector<std::string>  usr_input{"--nogui"};
+std::vector<std::string>  usr_input{"--gui"};
 
 int main(int argc, char* argv[]) {
 	for (int i=0 ; i < argc; i++) {
@@ -27,6 +27,7 @@ int main(int argc, char* argv[]) {
 		interpret();
 		break;
 	default:
+		interpret();
 		break;
 	}
 
