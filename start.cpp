@@ -2,7 +2,7 @@
 #include<vector>
 #include<string>
 #include"log.hpp"
-#include"nogui.hpp"
+#include"nowindow/nogui.hpp"
 /*
 Conversion method:
 All arrays will be converted into int aguments which it will be used in a switch method:
